@@ -1,1 +1,1 @@
-web: node /scrips/app.js
+web: node /index.html
