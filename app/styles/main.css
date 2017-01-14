@@ -6,8 +6,19 @@
 }
 
 body {
-  padding-top: 50px;
-  padding-bottom: 20px;
+/*  padding-top: 50px;
+  padding-bottom: 20px;*/
+}
+
+.titulePage{
+  font-size: xx-large;
+  color: black !important;
+}
+
+.carrusel{
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
 
 .carousel-image{
@@ -22,6 +33,11 @@ body {
   padding-right: 15px;
 }
 
+.buscador{
+  padding-top: 8px;
+  width: 46%;
+  float: right;
+}
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
@@ -86,3 +102,114 @@ body {
     border-bottom: 0;
   }
 }
+
+.itemPalace{
+  width: 100%;
+}
+
+.resBusqueda{
+  margin-right: 0px;
+  margin-top: 5px;
+}
+
+.rating{
+  font-size: large;
+  color: gold;
+}
+
+#onePalaceMap{
+  height: 300px;
+}
+
+#searchMap{
+  height: 250px;
+}
+
+#searchFilter{
+
+}
+
+.panel{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+  padding: 5px;
+  margin: 10px;
+}
+
+.onePalaceRow{
+  margin-left: -15px;
+  margin-right: 5px;
+}
+.onePalaceTitulo{
+  font-family: serif;
+  font-variant: small-caps;
+  background-color: burlywood;
+  color: black;
+}
+.comment{
+  margin: 10px -10px 10px 10px;
+}
+
+.titule{
+  font-size: 18px;
+  font-family: serif;
+  font-style: italic;
+  color: green;
+}
+
+.cabecera{
+  padding: 15px;
+  font-weight: bold;
+  color: darkslategray;
+}
+.menu{
+  margin-bottom: 0px;
+
+    z-index: 10;
+    width: 100%;
+    font-size: x-large;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.itemFound{
+  width: 31.333333%;
+}
+.google-map-container {
+    height: 238px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.searchBox{
+  margin: 15px;
+  width: 100%;
+  float: right;
+}
+
+#inputSearch{
+  float: right;
+  width: 30%;
+}
+
+.imgInMap{
+  width: 70px;
+  height: 35px;
+}
+
+.porPaises{
+  font-weight: bold;
+  color:rgba(255, 255, 255, 0.8);
+  margin-left: 15px;
+  }
+
+.porPaises  h1{
+    margin-top: -17px;
+    font-variant-caps: small-caps;
+    font-size: 50px;
+    font-family: fantasy;
+  }
+.porPaises  h2{
+    margin-top: -90px;
+  }

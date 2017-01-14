@@ -1,0 +1,90 @@
+
+<div ng-controller="MapCtrl as vm">
+
+  <div  ng-controller = 'SearchCtrl as sc' >
+    <div class="searchBox">
+      <input type = " text" list = "buscaPalaces" class=" form-control" id ="inputSearch"
+        placeholder="¿Qué quieres ver?" ng-model = "vm.address" ng-change = "vm.addressChanged()"/>
+      <datalist size = "4" ng-show = "p" id = "buscaPalaces" class="form-control" onselect = "vm.addressSelected()" ng-model = "vm.addressCustomSelected">
+        <select size = "6">
+          <option ng-repeat="p in sc.palaces" label="{{p.town}}, ({{p.country}})" value = {{p.name}}>
+        </select>
+      </datalist>
+    </div>
+
+<h2 ng-show = "vm.address" class = " cabecera page-header">Resultado de búsqueda para <{{vm.address}}></h2>
+
+    <div class = "row resBusqueda" >
+      <div class="col-sm-3">
+        <div id = "searchMap" class = "panel ">
+          <div class = "google-map-container">
+            <div map-lazy-load = "http://maps.google.com/maps/api/js">
+              <ng-map class = "google-map-container"
+                  on_bounds_changed = "vm.onBoundsChanged()" zoom = "{{vm.map.zoom}}" default-style = "false">
+                  <marker  ng-repeat = "palace in sc.palaces" id ="myMarker"
+                    position="{{palace.coord}}"
+                    icon= "icons/palace_blue.png"
+                    on-mouseover="vm.showCity(event, palace)"
+                    on-mouseout="vm.hideInfo(event)"
+                    on-click = "sc.goToPalace(event,palace)">
+                  </marker>
+                  <info-window id="myInfoWindow">
+                    <a ng-href = "#/onePalace" ng-click = "sc.setIndex(vm.selectedPalace.name)">
+                    <div ng-non-bindable="">
+                      <h6>{{vm.selectedPalace.name}}</h6>
+                      <img class="imgInMap" ng-src="{{vm.selectedPalace.picture}}">
+                    </div>
+                  </a>
+                  </info-window>
+              </ng-map>
+            </div>
+          </div>
+        </div>
+        <div id = "searchFilter" class = "panel">
+          <h3>Filtrar por...</h3>
+          <div class="panel panel-default">
+             <div class="panel-heading">
+               <h5><strong>Pais:</strong></h5>
+             </div>
+             <div class="panel-body">
+               <select class="form-control" size="6" name="selectListCountries" ng-model="sc.listCountriesSelected"  multiple >
+                  <option ng-repeat="option in sc.listCountriesToSelect" ng-value="option">{{option}}</option>
+                </select>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h5><strong>Valoración:</strong><h5>
+            </div>
+            <div class="panel-body">
+              <div ng-repeat = "val in sc.listRate">
+                <rating class = "rating" ng-model=val max = "sc.max" readonly ="sc.isReadonly"></rating>
+                <div class="col-xs-3">
+                <span><input type="checkbox" ng-model = sc.listRatesSelected[$index]></span></div>
+                <br/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-9">
+        <div class="row">
+          <div class="col-md-4 panel itemFound" ng-show = "vm.verPorPalacios" ng-model = "sc.myFilter" ng-repeat="palace in sc.palaces | filter:sc.customerFilter">
+            <a ng-href = "#/onePalace" ng-click = "sc.setIndex(palace.name)"><img class = "itemPalace img-thumbnail" ng-src = "{{palace.picture}}"></a>
+            <rating class = "rating" ng-model=palace.rate max = "sc.max" readonly ="sc.isReadonly"></rating>
+            <h4>{{palace.name}}</h4>
+            <p>{{palace.town}} - {{palace.country}}</p>
+          </div>
+          <div class="col-md-4 panel itemFound" ng-hide = "vm.verPorPalacios"  ng-repeat="comboPalace in sc.listPalacesForCountry" ng-click = "sc.selectCountry(comboPalace.country)">
+            <a ng-href = "#/search" ng-click = "vm.cambiaVista(comboPalace.country)" ><img class = "itemPalace img-thumbnail" ng-src = "{{comboPalace.picture}}"></a>
+            <div class="porPaises">
+              <h2>{{comboPalace.country}}</h2>
+              <h1>{{comboPalace.totalPalaces}} palacios</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

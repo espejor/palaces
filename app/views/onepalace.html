@@ -1,0 +1,40 @@
+<div ng-controller = "OnepalaceCtrl">
+  <div class = "text-center panel onePalaceTitulo">
+    <h2>{{onePalace.name}}</h2>
+    <h4>{{onePalace.town}} - {{onePalace.country}}</h4>
+  </div>
+
+  <div class = "row onePalaceRow">
+    <div id = "onePalaceFilter" class="col-sm-4">
+      <div class="panel">
+        <rating class = "rating" ng-model=onePalace.rate max = "5" readonly ="true"></rating>
+        <h6><a href = "">Tiene {{noComments}} comentarios</a></h6>
+      </div>
+      <div id = "onePalaceMap" class = "panel">
+        Mapa
+      </div>
+      <div id = "onePalaceDir" class = "panel">
+        <h6><img src="icons/web.jpg"><a href="www.webdelagranja.com" target="_blank">  www.webdelagranja.com </a></h6>
+        <h6><img src="icons/phone.jpg">  34 654 625 325</h6>
+        <h6><img src="icons/email.jpg">  lagranja@gmail.com</h6>
+        <h6><img src="icons/adress.png">  C/ La Breva, 65</h6>
+        <h6><img src="icons/city.jpg"> {{onePalace.town}}</h6>
+        <h6><img src="icons/country.png"> {{onePalace.country}}</h6>
+
+      </div>
+    </div>
+    
+    <div id = "onePalaceFull" class="col-sm-8">
+      <img class = "itemPalace panel" ng-src = {{onePalace.picture}}>
+      <div class = "commentList" ng-repeat = "comment in comments">
+        <div class = "comment panel">
+          <h5><strong>Comentario de: </strong>{{comment.author}}</h5>
+          <h6><strong>Realizado el:  </strong>{{comment.date}}</h6>
+          <h4 class = "titule">"{{comment.titul}}"</h4>
+          <rating class = "rating" ng-model=comment.customerRate max = "5" readonly ="true"></rating>
+          <h6>{{comment.text}}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

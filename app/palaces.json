@@ -1,0 +1,96 @@
+[{
+  "name" : "Grand Palace",
+  "coord" : [13.749167,100.491667],
+  "town" : "Bangkok",
+  "country" : "Thailand",
+  "picture" : "images/Grand_Palace-Bangkok.jpg",
+  "type" : "P",
+  "rate" : "4",
+  "comments" : [
+                {
+                  "author":"Perico de los Palotes",
+                  "date" : "25/10/2016",
+                  "customerRate" :"5",
+                  "titul" : "De puta madrex",
+                  "text" : "Este fue un maravilloso y acogedor restaurante justo un poco al sur de Montmartre. Había varias mesas vacías a las 8:00 pm, pero a las 8:45 p.m. el restaurante estaba lleno. Planifique su reserva en consecuencia. ASPIC sirve un menú de degustación del chef. Hay bastantes campos que cubren una amplia gama de cocinas: sopa, verduras, marisco, pescado, carne de pescado, postre. Mientras que la porciones individuales son pequeñas (este es un menú de degustación, después de todo), al final de la comida te será bastante completo. Cada curso está muy bien, y el personal le explicará qué es y cómo cada elemento de su preparación."
+                },
+                {
+                  "author":"Perico de los Palotes",
+                  "date" : "25/10/2016",
+                  "customerRate" :"3",
+                  "titul" : "Vaya merde",
+                  "text" : "Este fue un maravilloso y acogedor restaurante justo un poco al sur de Montmartre. Había varias mesas vacías a las 8:00 pm, pero a las 8:45 p.m. el restaurante estaba lleno. Planifique su reserva en consecuencia."
+                }
+               ]
+},
+{
+  "name" : "La Granja",
+  "coord" : [40.8975,-4.004583],
+  "town" : "La Granja de S. Ildefonso, Segovia",
+  "country" : "Spain",
+  "picture" : "images/lagranja.jpg",
+  "type" : "P",
+  "rate" : "3",
+  "comments" : []
+},
+{
+  "name" : "Palacio de Liria",
+  "coord" : [40.4277,-3.7124],
+  "town" : "Madrid",
+  "country" : "Spain",
+  "picture" : "images/palacio_de_liria.jpg",
+  "type" : "P",
+  "rate" : "0",
+  "comments" : []
+},
+{
+  "name" : "Palacio de Oriente",
+  "coord" : [40.418333,-3.714167],
+  "town" : "Madrid",
+  "country" : "Spain",
+  "picture" : "images/palacioreal.jpg",
+  "type" : "P",
+  "rate" : "0",
+  "comments" : []
+
+},
+{
+  "name" : "Casa de Pilatos",
+  "coord" : [37.389881,-5.987109],
+  "town" : "Sevilla",
+  "country" : "Spain",
+  "picture" : "images/casa-pilatos-sevilla.jpg",
+  "type" : "P",
+  "rate" : "0",
+  "comments" : []
+},
+{
+  "name" : "Palacio de Dueñas",
+  "coord" : [37.394722,-5.989167],
+  "town" : "Sevilla",
+  "country" : "Spain",
+  "picture" : "images/palacio-de-duenas-interior.jpg",
+  "type" : "P",
+  "rate" : "0",
+  "comments" : []
+},
+{
+  "name" : "Alcázar de Segovia",
+  "coord" : [40.9525,-4.132778],
+  "town" : "Segovia",
+  "country" : "Spain",
+  "picture" : "images/alcazar-de-segovia.jpg",
+  "type" : "P",
+  "rate" : "0",
+  "comments" : []
+},
+{
+  "name" : "Palacio de los Golfines de Abajo",
+  "coord" : [39.473347,-6.371753],
+  "town" : "Cáceres",
+  "country" : "Spain",
+  "picture" : "images/Palacio de los Golfines de Abajo.jpg",
+  "type" : "P",
+  "rate" : "0",
+  "comments" : []
+}]
